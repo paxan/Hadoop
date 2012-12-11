@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -16,8 +15,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from Writable import WritableComparable
-from WritableUtils import readVInt, writeVInt
+from .Writable import WritableComparable
+from .WritableUtils import readVInt, writeVInt
 
 class Text(WritableComparable):
     def __init__(self):
@@ -56,8 +55,11 @@ class Text(WritableComparable):
             return False
         return self._bytes == other._bytes and self._length and other._length
 
-    def toString(self):
+    def __str__(self):
         return self._bytes
+
+    def __unicode__(self):
+        return self._bytes.decode('utf-8')
 
     @staticmethod
     def readString(data_input):

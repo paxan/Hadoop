@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -23,11 +22,11 @@ class Writable(object):
     def readFields(self, data_input):
         raise NotImplementedError
 
-    def toString(self):
+    def __str__(self):
         return str(type(self))
 
     def __repr__(self):
-        return self.toString()
+        return self.__str__()
 
 class WritableComparable(Writable):
     def compareTo(self, other):
@@ -63,7 +62,7 @@ class AbstractValueWritable(WritableComparable):
     def hashCode(self):
         return int(self._value)
 
-    def toString(self):
+    def __str__(self):
         assert not isinstance(self._value, type(self)), (type(self._value))
         return str(self._value)
 

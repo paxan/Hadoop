@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -18,8 +17,8 @@
 
 import os
 
-from IntWritable import LongWritable
-import SequenceFile
+from .IntWritable import LongWritable
+from . import SequenceFile
 
 INDEX_FILE_NAME = 'index'
 DATA_FILE_NAME = 'data'

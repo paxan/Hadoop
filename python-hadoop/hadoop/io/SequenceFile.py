@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -21,16 +20,16 @@ from uuid import uuid1
 from time import time
 import os
 
-from hadoop.util.ReflectionUtils import hadoopClassFromName, hadoopClassName
+from ..util.ReflectionUtils import hadoopClassFromName, hadoopClassName
 
-from compress import CodecPool
+from .compress import CodecPool
 
-from WritableUtils import readVInt, writeVInt
-from Writable import Writable
-from OutputStream import *
-from InputStream import *
+from .WritableUtils import readVInt, writeVInt
+from .Writable import Writable
+from .OutputStream import *
+from .InputStream import *
 
-from Text import Text
+from .Text import Text
 
 BLOCK_COMPRESS_VERSION  = '\x04'
 CUSTOM_COMPRESS_VERSION = '\x05'

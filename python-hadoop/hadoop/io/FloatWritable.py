@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -16,7 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from Writable import AbstractValueWritable
+from .Writable import AbstractValueWritable
 
 class FloatWritable(AbstractValueWritable):
     def write(self, data_output):

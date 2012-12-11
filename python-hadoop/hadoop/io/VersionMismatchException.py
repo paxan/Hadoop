@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -18,9 +17,5 @@
 
 class VersionMismatchException(Exception):
     def __init__(self, expected_version, founded_version):
-        self.expected_version = expected_version
-        self.founded_version = founded_version
-
-    def toString(self):
-        return "A record version mismatch occured. Expecting %r, found %r" % (self.expected_version, self._faounded_version)
-
+        super(VersionMismatchException, self).__init__("A record version mismatch occured. Expecting %r, found %r"
+                                                        % (expected_version, founded_version))

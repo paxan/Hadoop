@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -16,7 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from Writable import WritableComparable
+from .Writable import WritableComparable
 
 class NullWritable(WritableComparable):
     def __new__(cls, *p, **k):
@@ -30,7 +29,7 @@ class NullWritable(WritableComparable):
     def readFields(self, data_input):
         pass
 
-    def toString(self):
+    def __str__(self):
         return "(null)"
 
     def hashCode(self):

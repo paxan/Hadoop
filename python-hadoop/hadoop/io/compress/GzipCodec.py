@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -17,11 +16,11 @@
 # limitations under the License.
 
 import gzip
-
-from hadoop.io.InputStream import DataInputBuffer
 import StringIO
 
-class GzipCodec:
+from ..InputStream import DataInputBuffer
+
+class GzipCodec(object):
     def compress(self, data):
         ioObj = StringIO.StringIO()
         f = gzip.GzipFile(fileobj = ioObj, mode='wb')

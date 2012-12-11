@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -16,17 +15,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import OutputStream
-import InputStream
+from . import OutputStream
+from . import InputStream
 
-import SequenceFile
-import ArrayFile
-import MapFile
-import SetFile
+from . import SequenceFile
+from . import ArrayFile
+from . import MapFile
+from . import SetFile
 
-from Writable import *
-from IntWritable import *
-from Text import *
-import WritableUtils
+from .Writable import *
+from .IntWritable import *
+from .Text import *
+from . import WritableUtils
 
-import compress
+from . import compress

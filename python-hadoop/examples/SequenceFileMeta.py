@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -28,7 +27,7 @@ def writeData(writer):
     for i in xrange(10):
         key.set(1000 - i)
         value.set(i)
-        print '[%d] %s %s' % (writer.getLength(), key.toString(), value.toString())
+        print '[%d] %s %s' % (writer.getLength(), key, value)
         writer.append(key, value)
 
 def testWrite(filename):
@@ -56,7 +55,7 @@ def testRead(filename):
     position = reader.getPosition()
     while reader.next(key, value):
         print '*' if reader.syncSeen() else ' ',
-        print '[%6s] %6s %6s' % (position, key.toString(), value.toString())
+        print '[%6s] %6s %6s' % (position, key, value)
         position = reader.getPosition()
 
     reader.close()

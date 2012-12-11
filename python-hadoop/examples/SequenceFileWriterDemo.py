@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -27,7 +26,7 @@ def writeData(writer):
     for i in xrange(1000):
         key.set(1000 - i)
         value.set(i)
-        print '[%d] %s %s' % (writer.getLength(), key.toString(), value.toString())
+        print '[%d] %s %s' % (writer.getLength(), key, value)
         writer.append(key, value)
 
 if __name__ == '__main__':

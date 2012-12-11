@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -16,8 +15,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from IntWritable import LongWritable
-import MapFile
+from .IntWritable import LongWritable
+from . import MapFile
 
 class Writer(MapFile.Writer):
     def __init__(self, path, value_class):

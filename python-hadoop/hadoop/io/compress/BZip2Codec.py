@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # ========================================================================
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -18,9 +17,9 @@
 
 import bz2
 
-from hadoop.io.InputStream import DataInputBuffer
+from ..InputStream import DataInputBuffer
 
-class BZip2Codec:
+class BZip2Codec(object):
     def compress(self, data):
         return bz2.compress(data)
 
